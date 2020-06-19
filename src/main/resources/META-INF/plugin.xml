@@ -1,0 +1,27 @@
+<idea-plugin>
+    <id>org.cacticouncil.amphibian2</id>
+    <name>Amphibian 2</name>
+    <vendor email="support@cacticouncil.org" url="https://github.com/cacticouncil/amphibian2">Cacti Council</vendor>
+
+    <description><![CDATA[
+    Blocks-based highlighting for source code
+    ]]></description>
+
+    <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.java</depends>
+
+    <applicationListeners>
+        <listener class="org.cacticouncil.amphibian2.Amphibian2EditorColorsListener" topic="com.intellij.openapi.editor.colors.EditorColorsListener"/>
+    </applicationListeners>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+        <annotator language="" implementationClass="org.cacticouncil.amphibian2.Amphibian2Annotator"/>
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+    </actions>
+</idea-plugin>
